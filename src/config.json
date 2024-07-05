@@ -31,6 +31,43 @@
   "//": "https://tinytapeout.com/faq/#how-can-i-map-an-additional-external-clock-to-one-of-the-gpios",
   "CLOCK_PORT": "clk",
 
+  "FP_PDN_CHECK_NODES": false,
+  "RUN_IRDROP_REPORT": "0",
+  "ERROR_ON_LVS_ERROR": false,
+
+  "FP_PDN_CFG": "dir::pdn_cfg.tcl",
+  "FP_PDN_HORIZONTAL_HALO": 1,
+  "FP_PDN_VERTICAL_HALO": 1,
+  "FP_TAP_HORIZONTAL_HALO": 1,
+  "FP_TAP_VERTICAL_HALO": 1,
+  "PL_MACRO_HALO": "0 0",
+
+  "MACROS": {
+    "tt_um_micro_test": {
+      "instances": {
+        "proj1": {
+          "location": [2, 0],
+          "orientation": "N"
+        },
+        "proj2": {
+          "location": [92, 0],
+          "orientation": "N"
+        },
+        "proj3": {
+          "location": [2, 54],
+          "orientation": "S"
+        },
+        "proj4": {
+          "location": [92, 54],
+          "orientation": "S"
+        }
+      },
+      "gds": ["dir::../macros/tt_um_micro_test.gds"],
+      "lef": ["dir::../macros/tt_um_micro_test.lef"],
+      "nl": ["dir::../macros/tt_um_micro_test.v"]
+    }
+  },
+
   "//": "Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html",
 
   "//": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
@@ -62,7 +99,7 @@
   "FP_IO_HLENGTH": 2,
   "FP_IO_VLENGTH": 2,
 
-  "FP_PDN_VPITCH": 38.87,
+  "FP_PDN_VPITCH": 16,
 
   "//": "Use alternative efabless decap cells to solve LI density issue",
   "DECAP_CELL": [
