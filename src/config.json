@@ -40,26 +40,25 @@
   "FP_PDN_VERTICAL_HALO": 1,
   "FP_TAP_HORIZONTAL_HALO": 1,
   "FP_TAP_VERTICAL_HALO": 1,
-  "PL_MACRO_HALO": "0 0",
 
   "MACROS": {
     "tt_um_micro_test": {
       "instances": {
         "proj1": {
-          "location": [2, 0],
+          "location": [0, 0],
           "orientation": "N"
         },
         "proj2": {
-          "location": [92, 0],
-          "orientation": "N"
+          "location": [96, 0],
+          "orientation": "FN"
         },
         "proj3": {
-          "location": [2, 54],
-          "orientation": "S"
+          "location": [0, 52],
+          "orientation": "N"
         },
         "proj4": {
-          "location": [92, 54],
-          "orientation": "S"
+          "location": [96, 52],
+          "orientation": "FN"
         }
       },
       "gds": ["dir::../macros/tt_um_micro_test.gds"],
@@ -85,7 +84,7 @@
   "SYNTH_READ_BLACKBOX_LIB": 1,
 
   "//": "Reduce wasted space",
-  "TOP_MARGIN_MULT": 1,
+  "TOP_MARGIN_MULT": 2,
   "BOTTOM_MARGIN_MULT": 1,
   "LEFT_MARGIN_MULT": 6,
   "RIGHT_MARGIN_MULT": 6,
