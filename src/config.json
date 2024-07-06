@@ -42,28 +42,49 @@
   "FP_TAP_VERTICAL_HALO": 1,
 
   "MACROS": {
-    "tt_um_micro_test": {
+    "tt_um_micro_proj1": {
       "instances": {
         "proj1": {
           "location": [0, 0],
           "orientation": "N"
-        },
+        }
+      },
+      "gds": ["dir::../macros/tt_um_micro_proj1.gds"],
+      "lef": ["dir::../macros/tt_um_micro_proj1.lef"],
+      "nl": ["dir::../macros/tt_um_micro_proj1.v"]
+    },
+    "tt_um_micro_proj2": {
+      "instances": {
         "proj2": {
           "location": [96, 0],
           "orientation": "FN"
-        },
+        }
+      },
+      "gds": ["dir::../macros/tt_um_micro_proj2.gds"],
+      "lef": ["dir::../macros/tt_um_micro_proj2.lef"],
+      "nl": ["dir::../macros/tt_um_micro_proj2.v"]
+    },
+    "tt_um_micro_proj3": {
+      "instances": {
         "proj3": {
           "location": [0, 52],
           "orientation": "N"
-        },
+        }
+      },
+      "gds": ["dir::../macros/tt_um_micro_proj3.gds"],
+      "lef": ["dir::../macros/tt_um_micro_proj3.lef"],
+      "nl": ["dir::../macros/tt_um_micro_proj3.v"]
+    },
+    "tt_um_micro_proj4": {
+      "instances": {
         "proj4": {
           "location": [96, 52],
           "orientation": "FN"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_test.gds"],
-      "lef": ["dir::../macros/tt_um_micro_test.lef"],
-      "nl": ["dir::../macros/tt_um_micro_test.v"]
+      "gds": ["dir::../macros/tt_um_micro_proj4.gds"],
+      "lef": ["dir::../macros/tt_um_micro_proj4.lef"],
+      "nl": ["dir::../macros/tt_um_micro_proj4.v"]
     }
   },
 

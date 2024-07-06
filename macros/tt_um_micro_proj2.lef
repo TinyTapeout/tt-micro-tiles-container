@@ -1,0 +1,212 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO tt_um_micro_proj2
+  CLASS BLOCK ;
+  FOREIGN tt_um_micro_proj2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 65.000 BY 50.000 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 21.580 2.480 23.180 46.480 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 60.450 2.480 62.050 46.480 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 18.280 2.480 19.880 46.480 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 57.150 2.480 58.750 46.480 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 2.570 65.000 2.870 ;
+    END
+  END clk
+  PIN rst_n
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.247500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 5.290 65.000 5.590 ;
+    END
+  END rst_n
+  PIN ui_in[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 8.010 65.000 8.310 ;
+    END
+  END ui_in[0]
+  PIN ui_in[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 10.730 65.000 11.030 ;
+    END
+  END ui_in[1]
+  PIN ui_in[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 13.450 65.000 13.750 ;
+    END
+  END ui_in[2]
+  PIN ui_in[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 16.170 65.000 16.470 ;
+    END
+  END ui_in[3]
+  PIN ui_in[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 18.890 65.000 19.190 ;
+    END
+  END ui_in[4]
+  PIN ui_in[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 21.610 65.000 21.910 ;
+    END
+  END ui_in[5]
+  PIN ui_in[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 24.330 65.000 24.630 ;
+    END
+  END ui_in[6]
+  PIN ui_in[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 27.050 65.000 27.350 ;
+    END
+  END ui_in[7]
+  PIN uo_out[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 29.770 65.000 30.070 ;
+    END
+  END uo_out[0]
+  PIN uo_out[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 32.490 65.000 32.790 ;
+    END
+  END uo_out[1]
+  PIN uo_out[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 35.210 65.000 35.510 ;
+    END
+  END uo_out[2]
+  PIN uo_out[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 37.930 65.000 38.230 ;
+    END
+  END uo_out[3]
+  PIN uo_out[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 40.650 65.000 40.950 ;
+    END
+  END uo_out[4]
+  PIN uo_out[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 43.370 65.000 43.670 ;
+    END
+  END uo_out[5]
+  PIN uo_out[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 46.090 65.000 46.390 ;
+    END
+  END uo_out[6]
+  PIN uo_out[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.891000 ;
+    PORT
+      LAYER met4 ;
+        RECT 64.000 48.810 65.000 49.110 ;
+    END
+  END uo_out[7]
+  OBS
+      LAYER nwell ;
+        RECT 0 0 65 50 ;
+      LAYER li1 ;
+        RECT 0 0 65 50 ;
+      LAYER met1 ;
+        RECT 0 0 65 50 ;
+      LAYER met2 ;
+        RECT 0 0 65 50 ;
+      LAYER met3 ;
+        RECT 0 0 65 50 ;
+      LAYER met4 ;
+        RECT 0 0 65 50 ;
+  END
+END tt_um_micro_proj2
+END LIBRARY
+

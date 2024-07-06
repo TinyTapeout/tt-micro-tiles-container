@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_micro_test
+MACRO tt_um_micro_proj3
   CLASS BLOCK ;
-  FOREIGN tt_um_micro_test ;
+  FOREIGN tt_um_micro_proj3 ;
   ORIGIN 0.000 0.000 ;
   SIZE 65.000 BY 50.000 ;
   PIN VGND
@@ -207,6 +207,6 @@ MACRO tt_um_micro_test
       LAYER met4 ;
         RECT 0 0 65 50 ;
   END
-END tt_um_micro_test
+END tt_um_micro_proj3
 END LIBRARY
 

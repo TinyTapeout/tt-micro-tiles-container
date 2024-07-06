@@ -1,6 +1,6 @@
 name: test
 on: 
-#  - push
+  - push
   - workflow_dispatch
 jobs:
   test:

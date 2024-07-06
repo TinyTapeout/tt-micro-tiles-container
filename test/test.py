@@ -3,11 +3,11 @@
 
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import ClockCycles
+from cocotb.triggers import ClockCycles, FallingEdge
 
 
 @cocotb.test()
-async def test_project(dut):
+async def test_proj1(dut):
     dut._log.info("Start")
 
     # Set the clock period to 10 us (100 KHz)
@@ -18,23 +18,105 @@ async def test_project(dut):
     dut._log.info("Reset")
     dut.ena.value = 1
     dut.ui_in.value = 0
-    dut.uio_in.value = 0
+    dut.uio_in.value = 0  # Select the first project, which is a multiplier module
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
 
-    dut._log.info("Test project behavior")
+    dut._log.info("Test multiplier module")
 
-    # Set the input values you want to test
-    dut.ui_in.value = 20
-    dut.uio_in.value = 30
+    assert dut.uo_out.value == 0
+    for x in range(16):
+        for y in range(16):
+            dut.ui_in.value = (x << 4) | y
+            await ClockCycles(dut.clk, 1)
+            await FallingEdge(dut.clk)
+            assert dut.uo_out.value == x * y
 
-    # Wait for one clock cycle to see the output values
+
+@cocotb.test()
+async def test_proj2(dut):
+    dut._log.info("Start")
+
+    # Set the clock period to 10 us (100 KHz)
+    clock = Clock(dut.clk, 10, units="us")
+    cocotb.start_soon(clock.start())
+
+    # Reset
+    dut._log.info("Reset")
+    dut.ena.value = 1
+    dut.ui_in.value = 0
+    dut.uio_in.value = 1  # Select the second project, which xors the input with 0x55
+    dut.rst_n.value = 0
+    await ClockCycles(dut.clk, 10)
+    dut.rst_n.value = 1
+
+    dut._log.info("Test xor with 0x55 module")
+
+    assert dut.uo_out.value == 0
+    for x in range(256):
+        dut.ui_in.value = x
+        await ClockCycles(dut.clk, 1)
+        await FallingEdge(dut.clk)
+        assert dut.uo_out.value == x ^ 0x55
+
+
+@cocotb.test()
+async def test_proj3(dut):
+    dut._log.info("Start")
+
+    # Set the clock period to 10 us (100 KHz)
+    clock = Clock(dut.clk, 10, units="us")
+    cocotb.start_soon(clock.start())
+
+    # Reset
+    dut._log.info("Reset")
+    dut.ena.value = 1
+    dut.ui_in.value = 0
+    dut.uio_in.value = 2  # Select the third project, which xors the input with 0x42
+    dut.rst_n.value = 0
+    await ClockCycles(dut.clk, 10)
+    dut.rst_n.value = 1
+
+    dut._log.info("Test xor with 0x42 module")
+
+    assert dut.uo_out.value == 0
+    for x in range(256):
+        dut.ui_in.value = x
+        await ClockCycles(dut.clk, 1)
+        await FallingEdge(dut.clk)
+        assert dut.uo_out.value == x ^ 0x42
+
+
+@cocotb.test()
+async def test_proj4(dut):
+    dut._log.info("Start")
+
+    # Set the clock period to 10 us (100 KHz)
+    clock = Clock(dut.clk, 10, units="us")
+    cocotb.start_soon(clock.start())
+
+    # Reset
+    dut._log.info("Reset")
+    dut.ena.value = 1
+    dut.ui_in.value = 0
+    dut.uio_in.value = 3  # Select the fourth project, echos the input on reset and outputs a counter otherwise
+    dut.rst_n.value = 0
+    await ClockCycles(dut.clk, 10)
+
+    dut._log.info("Test input echo on reset")
+
+    assert dut.uo_out.value == 0
+    for x in range(256):
+        dut.ui_in.value = x
+        await ClockCycles(dut.clk, 1)
+        await FallingEdge(dut.clk)
+        assert dut.uo_out.value == x
+
+    dut._log.info("Test counter")
+    dut.rst_n.value = 1
     await ClockCycles(dut.clk, 1)
-
-    # The following assersion is just an example of how to check the output values.
-    # Change it to match the actual expected output of your module:
-    assert dut.uo_out.value == 50
-
-    # Keep testing the module by changing the input values, waiting for
-    # one or more clock cycles, and asserting the expected output values.
+    for x in range(256):
+        await FallingEdge(dut.clk)
+        assert dut.uo_out.value == x
+        await ClockCycles(dut.clk, 1)
