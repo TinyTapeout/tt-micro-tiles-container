@@ -1,4 +1,4 @@
-module tt_um_micro_proj3 (clk,
+module tt_um_micro_test (clk,
     rst_n,
     VPWR,
     VGND,

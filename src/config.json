@@ -31,32 +31,31 @@
   "//": "https://tinytapeout.com/faq/#how-can-i-map-an-additional-external-clock-to-one-of-the-gpios",
   "CLOCK_PORT": "clk",
 
-  "FP_PDN_CHECK_NODES": false,
   "RUN_IRDROP_REPORT": "0",
   "ERROR_ON_LVS_ERROR": false,
 
-  "FP_PDN_CFG": "dir::pdn_cfg.tcl",
   "FP_PDN_HORIZONTAL_HALO": 1,
   "FP_PDN_VERTICAL_HALO": 1,
   "FP_TAP_HORIZONTAL_HALO": 1,
   "FP_TAP_VERTICAL_HALO": 1,
+  "FP_PDN_HORIZONTAL_LAYER": "met2",
 
   "MACROS": {
-    "tt_um_micro_proj1": {
+    "tt_um_micro_test": {
       "instances": {
         "proj1": {
           "location": [0, 0],
           "orientation": "N"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_proj1.gds"],
-      "lef": ["dir::../macros/tt_um_micro_proj1.lef"],
-      "nl": ["dir::../macros/tt_um_micro_proj1.v"]
+      "gds": ["dir::../macros/tt_um_micro_test.gds"],
+      "lef": ["dir::../macros/tt_um_micro_test.lef"],
+      "nl": ["dir::../macros/tt_um_micro_test.v"]
     },
     "tt_um_micro_proj2": {
       "instances": {
         "proj2": {
-          "location": [96, 0],
+          "location": [86.6, 0],
           "orientation": "FN"
         }
       },
@@ -78,7 +77,7 @@
     "tt_um_micro_proj4": {
       "instances": {
         "proj4": {
-          "location": [96, 52],
+          "location": [86.6, 52],
           "orientation": "FN"
         }
       },
@@ -87,6 +86,13 @@
       "nl": ["dir::../macros/tt_um_micro_proj4.v"]
     }
   },
+
+  "PDN_MACRO_CONNECTIONS": [
+    "proj1 VPWR VGND VPWR VGND",
+    "proj2 VPWR VGND VPWR VGND",
+    "proj3 VPWR VGND VPWR VGND",
+    "proj4 VPWR VGND VPWR VGND"
+  ],
 
   "//": "Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html",
 
@@ -108,7 +114,7 @@
   "TOP_MARGIN_MULT": 2,
   "BOTTOM_MARGIN_MULT": 1,
   "LEFT_MARGIN_MULT": 6,
-  "RIGHT_MARGIN_MULT": 6,
+  "RIGHT_MARGIN_MULT": 12,
 
   "//": "Absolute die size",
   "FP_SIZING": "absolute",
@@ -119,7 +125,9 @@
   "FP_IO_HLENGTH": 2,
   "FP_IO_VLENGTH": 2,
 
+  "FP_PDN_VOFFSET": 1.04,
   "FP_PDN_VPITCH": 16,
+  "FP_PDN_VSPACING": 6.4,
 
   "//": "Use alternative efabless decap cells to solve LI density issue",
   "DECAP_CELL": [
