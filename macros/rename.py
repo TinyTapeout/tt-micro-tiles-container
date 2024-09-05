@@ -12,12 +12,12 @@ with open(f"tt_um_micro_test.lef", "r") as f:
 with open(f"tt_um_micro_test.v", "r") as f:
     verilog_data = f.read()
 
-for i in range(2, 5):
-    KLAYOUT.read("tt_um_micro_test.gds")
-    for top_cell_read in KLAYOUT.top_cells():
-        if top_cell_read.name == "tt_um_micro_test":
-            top_cell_read.name = f"tt_um_micro_proj{i}"
+KLAYOUT.read("tt_um_micro_test.gds")
+top_cell = KLAYOUT.top_cell()
+assert top_cell.name == "tt_um_micro_test"
 
+for i in range(2, 5):
+    top_cell.name = f"tt_um_micro_proj{i}"
     KLAYOUT.write(f"tt_um_micro_proj{i}.gds")
 
     with open(f"tt_um_micro_proj{i}.lef", "w") as f:
