@@ -40,6 +40,13 @@
   "FP_TAP_VERTICAL_HALO": 1,
   "FP_PDN_HORIZONTAL_LAYER": "met2",
 
+  "ROUTING_OBSTRUCTIONS": [
+    "met2 0 0 64 50",
+    "met2 87 0 151 50",
+    "met2 0 52 64 104",
+    "met2 87 52 151 104"
+  ],
+
   "MACROS": {
     "tt_um_micro_test": {
       "instances": {
