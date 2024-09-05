@@ -52,16 +52,16 @@
       "lef": ["dir::../macros/tt_um_micro_test.lef"],
       "nl": ["dir::../macros/tt_um_micro_test.v"]
     },
-    "tt_um_micro_proj2": {
+    "tt_um_MichaelBell_shift_compute": {
       "instances": {
         "proj2": {
           "location": [86.6, 0],
           "orientation": "FN"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_proj2.gds"],
-      "lef": ["dir::../macros/tt_um_micro_proj2.lef"],
-      "nl": ["dir::../macros/tt_um_micro_proj2.v"]
+      "gds": ["dir::../macros/tt_um_MichaelBell_shift_compute.gds"],
+      "lef": ["dir::../macros/tt_um_MichaelBell_shift_compute.lef"],
+      "nl": ["dir::../macros/tt_um_MichaelBell_shift_compute.v"]
     },
     "tt_um_micro_proj3": {
       "instances": {
