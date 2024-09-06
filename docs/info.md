@@ -74,13 +74,14 @@ Finally, if rst_n is high the outputs mirror the inputs.  Reset is otherwise unu
 
 ### How it works 
 On ui_in[0] the input PDM datastream is received. Then it is processed in a CIC filter with 2 stages and a downsampling factor of 4. 
-The resulting filtered samples are outputted on uo_out[7:2] and the downsampled clock on uo_out[0]. Furthermore on uo_out[1] the normal clock is available. 
+The resulting filtered samples are outputted on `uo_out[7:2]` and the downsampled clock on `uo_out[0]`. Furthermore on `uo_out[1]` the normal clock is available. 
 
 ### How to test
 Connect a PDM microphone as follows:
-* clk: uo_out[1]
-* pdm: ui_in[0]
+* `clk`: `uo_out[1]`
+* `data`: `ui_in[0]`
 
-Then configure the clock generator of the RP2040 to generate a clock, as needed by the microphone (typically around 2 MHz).
-With a connected logic analyzer or the RP2040 the filtered data can now be received on uo_out[7:2], as well as the downsampled clock on uo_out[0].
+Then configure the clock generator of the RP2040 to generate a clock, as needed by the microphone (typically around 2 MHz) and reset the design via `rst_n`. 
+After the reset is removed again, the design is up and running, filtering the incoming datastream.
+With a connected logic analyzer or the RP2040 the filtered data can now be received on `uo_out[7:2]`, as well as the downsampled clock on `uo_out[0]`.
 The downsampled clock can be used to latch the filtered data. 
