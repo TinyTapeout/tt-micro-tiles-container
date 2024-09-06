@@ -86,7 +86,7 @@ After the reset is removed again, the design is up and running, filtering the in
 With a connected logic analyzer or the RP2040 the filtered data can now be received on `uo_out[7:2]`, as well as the downsampled clock on `uo_out[0]`.
 The downsampled clock can be used to latch the filtered data. 
 
-## Project 2 - Synchronous FIFO
+## Project 3 - Synchronous FIFO
 
 ### How it works
 
