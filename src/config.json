@@ -81,16 +81,16 @@
       "lef": ["dir::../macros/tt_um_micro_gfg_development_cic.lef"],
       "nl": ["dir::../macros/tt_um_micro_gfg_development_cic.v"]
     },
-    "tt_um_micro_proj4": {
+    "tt_um_watbulb_sync_fifo": {
       "instances": {
         "proj4": {
           "location": [86.6, 52],
           "orientation": "FN"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_proj4.gds"],
-      "lef": ["dir::../macros/tt_um_micro_proj4.lef"],
-      "nl": ["dir::../macros/tt_um_micro_proj4.v"]
+      "gds": ["dir::../macros/tt_um_watbulb_sync_fifo.gds"],
+      "lef": ["dir::../macros/tt_um_watbulb_sync_fifo.lef"],
+      "nl": ["dir::../macros/tt_um_watbulb_sync_fifo.v"]
     }
   },
 

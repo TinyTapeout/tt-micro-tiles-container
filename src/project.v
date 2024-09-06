@@ -44,7 +44,7 @@ module tt_um_micro_tiles_container (
       .uo_out(uo_out_proj[2])
   );
 
-  tt_um_micro_proj4 proj4 (
+  tt_um_watbulb_sync_fifo proj4 (
       .rst_n(sel == 3 ? rst_n : 1'b0),
       .clk(sel == 3 ? clk : 1'b0),
       .ui_in(sel == 3 ? ui_in : 8'h00),
