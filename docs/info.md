@@ -78,8 +78,8 @@ The resulting filtered samples are outputted on `uo_out[7:2]` and the downsample
 
 ### How to test
 Connect a PDM microphone as follows:
-* `clk`: `uo_out[1]`
-* `data`: `ui_in[0]`
+* Clock: `uo_out[1]`
+* Data: `ui_in[0]`
 
 Then configure the clock generator of the RP2040 to generate a clock, as needed by the microphone (typically around 2 MHz) and reset the design via `rst_n`. 
 After the reset is removed again, the design is up and running, filtering the incoming datastream.
