@@ -66,3 +66,34 @@ ui_in[2:1] select the output, as follows
 | 3          | Latched AND result          |
 
 Finally, if rst_n is high the outputs mirror the inputs.  Reset is otherwise unused.
+
+## Project ? - Wokwi Doodle
+
+* Repo: https://github.com/dlmiles/tt08-micro-wokwi-doodle (micro)
+* Repo: https://github.com/dlmiles/tt08-wokwi-doodle (1x1)
+* Wokwi: https://wokwi.com/projects/408272151035187201
+* Module: tt_um_wokwi_408272151035187201
+* Author: Darryl Miles
+* Description: TT08 Wokwi Doodle
+
+How to build instruction in README.md of tt08-micro-wokwi-doodle
+
+## How it works
+
+I don't know how it works, it is a doodle.
+
+The aim is to see if a random doodle can be made to count on the 7SEG.
+
+Maybe it can, maybe it can't, let the truth tables work it out.
+
+## How to test
+
+Send all possible input combinations to the project and see what happens.
+
+It has never been tested to find out if it is possible to observe a full set
+of 7SEG font states at the output.
+
+## External hardware
+
+None, just the standard Tiny Tapeout PCB.
+
