@@ -37,7 +37,7 @@ module tt_um_micro_tiles_container (
       .uo_out(uo_out_proj[1])
   );
 
-  tt_um_micro_proj3 proj3 (
+  tt_um_micro_gfg_development_cic proj3 (
       .rst_n(sel == 2 ? rst_n : 1'b0),
       .clk(sel == 2 ? clk : 1'b0),
       .ui_in(sel == 2 ? ui_in : 8'h00),
