@@ -70,16 +70,16 @@
       "lef": ["dir::../macros/tt_um_MichaelBell_shift_compute.lef"],
       "nl": ["dir::../macros/tt_um_MichaelBell_shift_compute.v"]
     },
-    "tt_um_micro_proj3": {
+    "tt_um_micro_gfg_development_cic": {
       "instances": {
         "proj3": {
           "location": [0, 52],
           "orientation": "N"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_proj3.gds"],
-      "lef": ["dir::../macros/tt_um_micro_proj3.lef"],
-      "nl": ["dir::../macros/tt_um_micro_proj3.v"]
+      "gds": ["dir::../macros/tt_um_micro_gfg_development_cic.gds"],
+      "lef": ["dir::../macros/tt_um_micro_gfg_development_cic.lef"],
+      "nl": ["dir::../macros/tt_um_micro_gfg_development_cic.v"]
     },
     "tt_um_micro_proj4": {
       "instances": {
