@@ -178,7 +178,7 @@ MACRO tt_um_micro_gfg_development_cic
   PIN uo_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 1.721000 ;
+    ANTENNADIFFAREA 1.524450 ;
     PORT
       LAYER met2 ;
         RECT 64.000 43.370 65.000 43.670 ;
@@ -203,10 +203,19 @@ MACRO tt_um_micro_gfg_development_cic
     END
   END uo_out[7]
   OBS
+      LAYER nwell ;
+        RECT 2.570 42.105 62.290 44.935 ;
+        RECT 2.570 36.665 62.290 39.495 ;
+        RECT 2.570 31.225 62.290 34.055 ;
+        RECT 2.570 25.785 62.290 28.615 ;
+        RECT 2.570 20.345 62.290 23.175 ;
+        RECT 2.570 14.905 62.290 17.735 ;
+        RECT 2.570 9.465 62.290 12.295 ;
+        RECT 2.570 4.025 62.290 6.855 ;
       LAYER li1 ;
         RECT 2.760 2.635 62.100 46.325 ;
       LAYER met1 ;
-        RECT 2.460 2.080 64.790 46.480 ;
+        RECT 2.760 1.740 64.790 46.480 ;
       LAYER met2 ;
         RECT 5.620 48.530 63.720 48.810 ;
         RECT 5.620 46.760 64.760 48.530 ;
@@ -252,7 +261,7 @@ MACRO tt_um_micro_gfg_development_cic
         RECT 60.880 3.150 64.760 5.010 ;
         RECT 60.880 2.290 63.720 3.150 ;
         RECT 60.880 2.200 64.760 2.290 ;
-        RECT 5.620 2.050 64.760 2.200 ;
+        RECT 5.620 1.710 64.760 2.200 ;
   END
 END tt_um_micro_gfg_development_cic
 END LIBRARY
