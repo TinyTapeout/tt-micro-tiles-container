@@ -31,9 +31,6 @@
   "//": "https://tinytapeout.com/faq/#how-can-i-map-an-additional-external-clock-to-one-of-the-gpios",
   "CLOCK_PORT": "clk",
 
-  "RUN_IRDROP_REPORT": "0",
-  "ERROR_ON_LVS_ERROR": false,
-
   "FP_PDN_HORIZONTAL_HALO": 1,
   "FP_PDN_VERTICAL_HALO": 1,
   "FP_TAP_HORIZONTAL_HALO": 1,
