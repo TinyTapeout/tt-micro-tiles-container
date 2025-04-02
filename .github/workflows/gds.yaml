@@ -7,11 +7,25 @@ on:
 jobs:
   gds:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Use latest stable Python 3
+
+      - name: Install Python dependencies
+        run: pip install -r macros/requirements.txt
+
+      - name: Run grab_micro_gds.py
+        run: python grab_micro_gds.py
+        working-directory: macros
 
       - name: Build GDS
         uses: TinyTapeout/tt-gds-action@tt09
@@ -28,11 +42,25 @@ jobs:
   gl_test:
     needs: gds
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Use latest stable Python 3
+
+      - name: Install Python dependencies
+        run: pip install -r macros/requirements.txt
+
+      - name: Run grab_micro_gds.py
+        run: python grab_micro_gds.py
+        working-directory: macros
 
       - name: GL test
         uses: TinyTapeout/tt-gds-action/gl_test@tt09

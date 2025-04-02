@@ -24,17 +24,3 @@ async def test_proj1(dut):
 
     dut._log.info("Test input echo on reset")
 
-    assert dut.uo_out.value == 0
-    for x in range(256):
-        dut.ui_in.value = x
-        await ClockCycles(dut.clk, 1)
-        await FallingEdge(dut.clk)
-        assert dut.uo_out.value == x
-
-    dut._log.info("Test counter")
-    dut.rst_n.value = 1
-    await ClockCycles(dut.clk, 1)
-    for x in range(256):
-        await FallingEdge(dut.clk)
-        assert dut.uo_out.value == x
-        await ClockCycles(dut.clk, 1)

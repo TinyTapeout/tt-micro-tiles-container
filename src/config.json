@@ -50,49 +50,49 @@
   ],
 
   "MACROS": {
-    "tt_um_micro_test": {
+    "tt_um_micro1": {
       "instances": {
         "proj1": {
           "location": [0, 0],
           "orientation": "N"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_test.gds"],
-      "lef": ["dir::../macros/tt_um_micro_test.lef"],
-      "nl": ["dir::../macros/tt_um_micro_test.v"]
+      "gds": ["dir::../macros/tt_um_micro1.gds"],
+      "lef": ["dir::../macros/tt_um_micro1.lef"],
+      "nl": ["dir::../macros/tt_um_micro1.v"]
     },
-    "tt_um_MichaelBell_shift_compute": {
+    "tt_um_micro2": {
       "instances": {
         "proj2": {
           "location": [86.6, 0],
           "orientation": "FN"
         }
       },
-      "gds": ["dir::../macros/tt_um_MichaelBell_shift_compute.gds"],
-      "lef": ["dir::../macros/tt_um_MichaelBell_shift_compute.lef"],
-      "nl": ["dir::../macros/tt_um_MichaelBell_shift_compute.v"]
+      "gds": ["dir::../macros/tt_um_micro2.gds"],
+      "lef": ["dir::../macros/tt_um_micro2.lef"],
+      "nl": ["dir::../macros/tt_um_micro2.v"]
     },
-    "tt_um_micro_gfg_development_cic": {
+    "tt_um_micro3": {
       "instances": {
         "proj3": {
           "location": [0, 52],
           "orientation": "N"
         }
       },
-      "gds": ["dir::../macros/tt_um_micro_gfg_development_cic.gds"],
-      "lef": ["dir::../macros/tt_um_micro_gfg_development_cic.lef"],
-      "nl": ["dir::../macros/tt_um_micro_gfg_development_cic.v"]
+      "gds": ["dir::../macros/tt_um_micro3.gds"],
+      "lef": ["dir::../macros/tt_um_micro3.lef"],
+      "nl": ["dir::../macros/tt_um_micro3.v"]
     },
-    "tt_um_watbulb_sync_fifo": {
+    "tt_um_micro4": {
       "instances": {
         "proj4": {
           "location": [86.6, 52],
           "orientation": "FN"
         }
       },
-      "gds": ["dir::../macros/tt_um_watbulb_sync_fifo.gds"],
-      "lef": ["dir::../macros/tt_um_watbulb_sync_fifo.lef"],
-      "nl": ["dir::../macros/tt_um_watbulb_sync_fifo.v"]
+      "gds": ["dir::../macros/tt_um_micro4.gds"],
+      "lef": ["dir::../macros/tt_um_micro4.lef"],
+      "nl": ["dir::../macros/tt_um_micro4.v"]
     }
   },
 

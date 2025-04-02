@@ -7,7 +7,7 @@ TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 MACROS_DIR = $(PWD)/../macros
 PROJECT_SOURCES = project.v
-MACRO_SOURCES = tt_um_micro_test.v tt_um_MichaelBell_shift_compute.v tt_um_micro_gfg_development_cic.v tt_um_watbulb_sync_fifo.v
+MACRO_SOURCES = tt_um_micro1.v tt_um_micro2.v tt_um_micro3.v tt_um_micro4.v
 
 ifneq ($(GATES),yes)
 
